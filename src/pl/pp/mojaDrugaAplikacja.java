@@ -1,34 +1,15 @@
 package pl.pp;
 
-import java.util.Scanner;
-
 public class mojaDrugaAplikacja {
     public static void main(String[] args) {
 
-        double x = 10;
-        double y = 2;
+        int x = 10;
+        System.out.println("x = " + x);
 
-        Scanner scanner = new Scanner(System.in);
+        int doubleX = 2 * x;
+        System.out.println("Dwukrotność x = " + doubleX);
 
-        var result = x + y;
-        System.out.println("x + y = " + result);
-
-        result = x - y;
-        System.out.println("x - y = " + result);
-
-        result = x * y;
-        System.out.println("x * y = " + result);
-
-        result = x / y;
-        System.out.println("x / y = " + result);
-
-        result = x % y;
-        System.out.println("x % y = " + result);
-
-        System.out.println("Wpisz dwie liczby rozdzielone klawiszem Enter:");
-        double first = scanner.nextDouble();
-        double second = scanner.nextDouble();
-
-        System.out.println("x + y = " + (first + second));
+        int xSquared = x * x;
+        System.out.println("x^2 = " + xSquared);
     }
 }
