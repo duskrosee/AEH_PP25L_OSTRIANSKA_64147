@@ -5,21 +5,23 @@ import java.util.Scanner;
 public class mojaTrzeciaAplikacja {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int dni;
-        while (true) {
-            System.out.println("Podaj liczbę dni");
-            dni = scanner.nextInt();
+        double fahrenheit;
 
-            if (dni < 0) {
+        while (true) {
+            System.out.println("Podaj temperaturę w skali Fahrenheit (wprowadż -1, aby zakończyć: ");
+            fahrenheit = scanner.nextDouble();
+
+            if (fahrenheit == -1) {
                 System.out.println("Zakończenie programu...");
                 break;
             }
-            int tygodnie = dni / 7;
-            int resztaDni = dni % 7;
 
-            System.out.println(dni + " dni to " + tygodnie + " tygodnie i " + resztaDni + " dni. ");
+                double celsius;
+                celsius = (fahrenheit - 32) / 1.8;
+                double kelvin = celsius + 273.16;
+
+                System.out.printf("Temperatura: %.2f F to %.2f C i %.2f K\n", fahrenheit, celsius, kelvin);
+            }
+            scanner.close();
         }
-
-        scanner.close();
     }
-}
